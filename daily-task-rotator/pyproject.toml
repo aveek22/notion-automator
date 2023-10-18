@@ -1,15 +1,14 @@
 [tool.poetry]
-name = "daily-task-watcher"
+name = "daily-task-rotator"
 version = "0.1.0"
 description = ""
 authors = ["Aveek Das <aveek.22@gmail.com>"]
 readme = "README.md"
-packages = [{include = "daily_task_watcher"}]
+packages = [{include = "daily_task_rotator"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 python-dotenv = "^1.0.0"
-jupyter = "^1.0.0"
 
 
 [build-system]
