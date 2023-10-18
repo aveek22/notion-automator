@@ -8,6 +8,8 @@ packages = [{include = "daily_task_watcher"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+python-dotenv = "^1.0.0"
+jupyter = "^1.0.0"
 
 
 [build-system]
