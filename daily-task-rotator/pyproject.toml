@@ -9,6 +9,8 @@ packages = [{include = "daily_task_rotator"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+urllib3 = "1.26.6"
 
 
 [build-system]
