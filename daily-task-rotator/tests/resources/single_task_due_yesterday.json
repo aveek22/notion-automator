@@ -1,0 +1,138 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "694e553d-b279-4c25-8874-d25a99f033de",
+      "created_time": "2023-10-23T16:29:00.000Z",
+      "last_edited_time": "2023-10-27T20:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "cover": null,
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/icons/checkmark_gray.svg"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "73f0bb55-2dbe-4c1d-a293-3702f3101880"
+      },
+      "archived": false,
+      "properties": {
+        "Done": {
+          "id": "BS%7C%5E",
+          "type": "checkbox",
+          "checkbox": false
+        },
+        "Sprint": {
+          "id": "CNpc",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Sub-item": {
+          "id": "MY%3F%3A",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Priority": {
+          "id": "P%5EK%5E",
+          "type": "select",
+          "select": {
+            "id": "XX_h",
+            "name": "\ud83d\udea3\u200d\u2642\ufe0f Medium",
+            "color": "yellow"
+          }
+        },
+        "Workspace": {
+          "id": "SQFB",
+          "type": "rollup",
+          "rollup": {
+            "type": "array",
+            "array": [],
+            "function": "show_original"
+          }
+        },
+        "Parent item": {
+          "id": "Sgd_",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Project": {
+          "id": "THW%5B",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Due Date": {
+          "id": "V%3AEe",
+          "type": "date",
+          "date": {
+            "start": "2023-10-26",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Tags": {
+          "id": "xTGs",
+          "type": "multi_select",
+          "multi_select": []
+        },
+        "Last edited time": {
+          "id": "zYZq",
+          "type": "last_edited_time",
+          "last_edited_time": "2023-10-27T20:38:00.000Z"
+        },
+        "Status": {
+          "id": "%7CTFU",
+          "type": "status",
+          "status": {
+            "id": "69d08a87-562c-4dec-bd75-9ea4615bb4a9",
+            "name": "In progress",
+            "color": "blue"
+          }
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Installing Confluent Schema Registry",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Installing Confluent Schema Registry",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Installing-Confluent-Schema-Registry-694e553db2794c258874d25a99f033de",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "85fa6b2e-37d5-4c34-9c22-9d9a2d307835"
+}
