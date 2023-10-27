@@ -1,3 +1,5 @@
+from typing import Optional, Dict, Any
+
 from datetime import date
 import requests
 import json
@@ -49,7 +51,7 @@ def get_task_due_today(database_id: str, token: str):
         print(response.text)
 
 
-def get_task_due_yesterday(database_id: str, token: str):
+def get_task_due_yesterday(database_id: str, token: str) -> Optional[Dict[str, Any]]:
     url = f"https://api.notion.com/v1/databases/{database_id}/query"
     due_date = get_yesterday()
     headers = {
@@ -70,11 +72,14 @@ def get_task_due_yesterday(database_id: str, token: str):
 
     if response.status_code == 200:
         response_json = json.loads(response.text)
+        task_id = response_json['results'][0]['id']
+        task_name = response_json['results'][0]['properties']['Name']['title'][0]['text']['content']
         # print(f"Task Name: {response_json['results'][0]['properties']['Name']['title'][0]['text']['content']}")
-        print(f"Task Name: {response_json}")
+        return {"task_id": task_id, "task_name": task_name}
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
+        return None
 
 
 def udpate_task_due_date(task_id: str, token: str, due_date: date):
