@@ -1,0 +1,574 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "694e553d-b279-4c25-8874-d25a99f033de",
+      "created_time": "2023-10-23T16:29:00.000Z",
+      "last_edited_time": "2023-10-27T20:54:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "cover": null,
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/icons/checkmark_gray.svg"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "73f0bb55-2dbe-4c1d-a293-3702f3101880"
+      },
+      "archived": false,
+      "properties": {
+        "Done": {
+          "id": "BS%7C%5E",
+          "type": "checkbox",
+          "checkbox": false
+        },
+        "Sprint": {
+          "id": "CNpc",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Sub-item": {
+          "id": "MY%3F%3A",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Priority": {
+          "id": "P%5EK%5E",
+          "type": "select",
+          "select": {
+            "id": "XX_h",
+            "name": "\ud83d\udea3\u200d\u2642\ufe0f Medium",
+            "color": "yellow"
+          }
+        },
+        "Workspace": {
+          "id": "SQFB",
+          "type": "rollup",
+          "rollup": {
+            "type": "array",
+            "array": [],
+            "function": "show_original"
+          }
+        },
+        "Parent item": {
+          "id": "Sgd_",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Project": {
+          "id": "THW%5B",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Due Date": {
+          "id": "V%3AEe",
+          "type": "date",
+          "date": {
+            "start": "2023-10-26",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Tags": {
+          "id": "xTGs",
+          "type": "multi_select",
+          "multi_select": []
+        },
+        "Last edited time": {
+          "id": "zYZq",
+          "type": "last_edited_time",
+          "last_edited_time": "2023-10-27T20:54:00.000Z"
+        },
+        "Status": {
+          "id": "%7CTFU",
+          "type": "status",
+          "status": {
+            "id": "69d08a87-562c-4dec-bd75-9ea4615bb4a9",
+            "name": "In progress",
+            "color": "blue"
+          }
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Installing Confluent Schema Registry",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Installing Confluent Schema Registry",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Installing-Confluent-Schema-Registry-694e553db2794c258874d25a99f033de",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "851c9c94-523f-4ff6-9b9f-1a438bf92f2f",
+      "created_time": "2023-10-03T13:20:00.000Z",
+      "last_edited_time": "2023-10-27T20:54:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "cover": null,
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/icons/checkmark_gray.svg"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "73f0bb55-2dbe-4c1d-a293-3702f3101880"
+      },
+      "archived": false,
+      "properties": {
+        "Done": {
+          "id": "BS%7C%5E",
+          "type": "checkbox",
+          "checkbox": false
+        },
+        "Sprint": {
+          "id": "CNpc",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Sub-item": {
+          "id": "MY%3F%3A",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Priority": {
+          "id": "P%5EK%5E",
+          "type": "select",
+          "select": {
+            "id": "XX_h",
+            "name": "\ud83d\udea3\u200d\u2642\ufe0f Medium",
+            "color": "yellow"
+          }
+        },
+        "Workspace": {
+          "id": "SQFB",
+          "type": "rollup",
+          "rollup": {
+            "type": "array",
+            "array": [],
+            "function": "show_original"
+          }
+        },
+        "Parent item": {
+          "id": "Sgd_",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Project": {
+          "id": "THW%5B",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Due Date": {
+          "id": "V%3AEe",
+          "type": "date",
+          "date": {
+            "start": "2023-10-26",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Tags": {
+          "id": "xTGs",
+          "type": "multi_select",
+          "multi_select": []
+        },
+        "Last edited time": {
+          "id": "zYZq",
+          "type": "last_edited_time",
+          "last_edited_time": "2023-10-27T20:54:00.000Z"
+        },
+        "Status": {
+          "id": "%7CTFU",
+          "type": "status",
+          "status": {
+            "id": "7255ea06-4294-4a8c-8288-135de55ee46e",
+            "name": "Not started",
+            "color": "default"
+          }
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Connect Article Cleaner to Schema Registry",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Connect Article Cleaner to Schema Registry",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Connect-Article-Cleaner-to-Schema-Registry-851c9c94523f4ff69b9f1a438bf92f2f",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "7ec7851f-d747-4e9b-9080-81fe0cbe33b2",
+      "created_time": "2023-09-22T15:00:00.000Z",
+      "last_edited_time": "2023-10-27T20:54:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "cover": null,
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/icons/checkmark_gray.svg"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "73f0bb55-2dbe-4c1d-a293-3702f3101880"
+      },
+      "archived": false,
+      "properties": {
+        "Done": {
+          "id": "BS%7C%5E",
+          "type": "checkbox",
+          "checkbox": false
+        },
+        "Sprint": {
+          "id": "CNpc",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Sub-item": {
+          "id": "MY%3F%3A",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Priority": {
+          "id": "P%5EK%5E",
+          "type": "select",
+          "select": {
+            "id": "XX_h",
+            "name": "\ud83d\udea3\u200d\u2642\ufe0f Medium",
+            "color": "yellow"
+          }
+        },
+        "Workspace": {
+          "id": "SQFB",
+          "type": "rollup",
+          "rollup": {
+            "type": "array",
+            "array": [
+              {
+                "type": "select",
+                "select": {
+                  "id": "46b9e21a-8896-4f46-85e9-8abdc6bdee89",
+                  "name": "DotSlashData",
+                  "color": "red"
+                }
+              }
+            ],
+            "function": "show_original"
+          }
+        },
+        "Parent item": {
+          "id": "Sgd_",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Project": {
+          "id": "THW%5B",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "1293f464-a0e8-4f52-817b-14696ace7207"
+            }
+          ],
+          "has_more": false
+        },
+        "Due Date": {
+          "id": "V%3AEe",
+          "type": "date",
+          "date": {
+            "start": "2023-10-26",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Tags": {
+          "id": "xTGs",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "8d61bfae-c9ac-4d98-977f-a3db297dec00",
+              "name": "Substack",
+              "color": "pink"
+            }
+          ]
+        },
+        "Last edited time": {
+          "id": "zYZq",
+          "type": "last_edited_time",
+          "last_edited_time": "2023-10-27T20:54:00.000Z"
+        },
+        "Status": {
+          "id": "%7CTFU",
+          "type": "status",
+          "status": {
+            "id": "7255ea06-4294-4a8c-8288-135de55ee46e",
+            "name": "Not started",
+            "color": "default"
+          }
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Create a profile in Substack",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Create a profile in Substack",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Create-a-profile-in-Substack-7ec7851fd7474e9b908081fe0cbe33b2",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "faba63ef-efea-454a-8fde-176660e59a12",
+      "created_time": "2023-08-22T19:46:00.000Z",
+      "last_edited_time": "2023-10-27T20:54:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "d7b47b8c-c9e9-4915-81ce-bd17bbff8853"
+      },
+      "cover": null,
+      "icon": {
+        "type": "external",
+        "external": {
+          "url": "https://www.notion.so/icons/checkmark_gray.svg"
+        }
+      },
+      "parent": {
+        "type": "database_id",
+        "database_id": "73f0bb55-2dbe-4c1d-a293-3702f3101880"
+      },
+      "archived": false,
+      "properties": {
+        "Done": {
+          "id": "BS%7C%5E",
+          "type": "checkbox",
+          "checkbox": false
+        },
+        "Sprint": {
+          "id": "CNpc",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "9a2ebe71-7d22-4f9c-b1b7-8f9642aa90d4"
+            }
+          ],
+          "has_more": false
+        },
+        "Sub-item": {
+          "id": "MY%3F%3A",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Priority": {
+          "id": "P%5EK%5E",
+          "type": "select",
+          "select": {
+            "id": "XX_h",
+            "name": "\ud83d\udea3\u200d\u2642\ufe0f Medium",
+            "color": "yellow"
+          }
+        },
+        "Workspace": {
+          "id": "SQFB",
+          "type": "rollup",
+          "rollup": {
+            "type": "array",
+            "array": [
+              {
+                "type": "select",
+                "select": {
+                  "id": "cb8a6c16-6e18-4721-9a5c-71b87ee5737b",
+                  "name": "Learning",
+                  "color": "default"
+                }
+              }
+            ],
+            "function": "show_original"
+          }
+        },
+        "Parent item": {
+          "id": "Sgd_",
+          "type": "relation",
+          "relation": [],
+          "has_more": false
+        },
+        "Project": {
+          "id": "THW%5B",
+          "type": "relation",
+          "relation": [
+            {
+              "id": "f11994bd-11ad-4e7d-a78f-11e2332ee76f"
+            }
+          ],
+          "has_more": false
+        },
+        "Due Date": {
+          "id": "V%3AEe",
+          "type": "date",
+          "date": {
+            "start": "2023-10-26",
+            "end": null,
+            "time_zone": null
+          }
+        },
+        "Tags": {
+          "id": "xTGs",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "28eb1532-e548-4954-8e57-c3ab06f0f477",
+              "name": "Notion",
+              "color": "red"
+            },
+            {
+              "id": "adb970f3-cc70-45c9-966a-d8973b2edaa9",
+              "name": "Automation",
+              "color": "purple"
+            },
+            {
+              "id": "353914fc-e6bb-4a3c-9e50-9fd97044724a",
+              "name": "AWS",
+              "color": "brown"
+            }
+          ]
+        },
+        "Last edited time": {
+          "id": "zYZq",
+          "type": "last_edited_time",
+          "last_edited_time": "2023-10-27T20:54:00.000Z"
+        },
+        "Status": {
+          "id": "%7CTFU",
+          "type": "status",
+          "status": {
+            "id": "69d08a87-562c-4dec-bd75-9ea4615bb4a9",
+            "name": "In progress",
+            "color": "blue"
+          }
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Notion Automator",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Notion Automator",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Notion-Automator-faba63efefea454a8fde176660e59a12",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "35cfe061-d574-4f40-86b3-79772f6d7628"
+}
