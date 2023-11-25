@@ -2,6 +2,8 @@ from rotator.daily_task_rotator import DailyTaskRotator
 import rotator.config as config
 
 
+# TODO: Implement logger
+
 def main():
     rotator = DailyTaskRotator(config)
 

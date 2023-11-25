@@ -50,6 +50,8 @@ class DailyTaskRotator:
         :return: List of Task
         """
 
+        # TODO: Add filter for incomplete tasks
+
         url = f"{self.config.BASE_URI}databases/{self.config.database_id}/query"
         data = {
             "filter": {
