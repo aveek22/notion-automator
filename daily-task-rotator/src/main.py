@@ -4,6 +4,8 @@ import rotator.config as config
 
 # TODO: Implement logger
 # TODO: Send update to slack / email for due today
+# TODO: Implement code to read secrets from AWS Secret Manager
+# TODO: Figure out the entire build process and CICD for Lambda
 
 def main():
     rotator = DailyTaskRotator(config)
