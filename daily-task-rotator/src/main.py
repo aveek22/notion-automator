@@ -1,15 +1,14 @@
-import os
-from dotenv import load_dotenv
-from rotator.daily_task_rotator import get_database, get_task_due_today, get_task_due_yesterday, udpate_task_due_date
-from rotator.util import get_yesterday, get_today
+from rotator.daily_task_rotator import DailyTaskRotator
+import rotator.config as config
 
-load_dotenv()
-database_id = os.environ.get("DB_TASKS")
-token = os.environ.get("NOTION_SECRET")
+
+def main():
+    rotator = DailyTaskRotator(config)
+
+    tasks_due_yesterday = rotator.get_tasks_due_yesterday()
+    for task in tasks_due_yesterday:
+        rotator.udpate_task_due_date_to_today(task)
+
 
 if __name__ == "__main__":
-    # get_database(database_id, token)
-    # get_task_due_today(database_id, token)
-    task_details = get_task_due_yesterday(database_id, token)
-    # print(task_details["task_id"])
-    udpate_task_due_date(task_id=task_details["task_id"], due_date=get_today(), token=token)
+    main()
