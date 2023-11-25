@@ -8,7 +8,7 @@ import rotator.config as config
 # TODO: Manual Terraform deploy to AWS - INPROGRESS
 # TODO: Figure out the entire build process and CICD for Lambda
 
-def main():
+def handler(event, context):
     rotator = DailyTaskRotator(config)
 
     tasks_due_yesterday = rotator.get_tasks_due_yesterday()
@@ -17,4 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    handler("", "")
