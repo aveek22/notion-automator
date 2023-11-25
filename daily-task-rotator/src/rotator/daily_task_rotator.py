@@ -50,15 +50,23 @@ class DailyTaskRotator:
         :return: List of Task
         """
 
-        # TODO: Add filter for incomplete tasks
-
         url = f"{self.config.BASE_URI}databases/{self.config.database_id}/query"
         data = {
             "filter": {
-                "property": "Due Date",
-                "date": {
-                    "equals": f"{due_date}"
-                }
+                "and": [
+                    {
+                        "property": "Due Date",
+                        "date": {
+                            "equals": f"{due_date}"
+                        }
+                    },
+                    {
+                        "property": "Status",
+                        "status": {
+                            "does_not_equal": "Done"
+                        }
+                    }
+                ]
             }
         }
         print(f"Using token: {self.config.token} and database: {self.config.database_id}")
