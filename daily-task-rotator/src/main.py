@@ -3,6 +3,7 @@ import rotator.config as config
 
 
 # TODO: Implement logger
+# TODO: Send update to slack / email for due today
 
 def main():
     rotator = DailyTaskRotator(config)
