@@ -1,109 +1,77 @@
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 
 from datetime import date
 import requests
 import json
 
 from rotator.util import get_yesterday, get_today
+from rotator.task import Task
 
 
-def get_database(database_id: str, token: str):
-    url = f"https://api.notion.com/v1/databases/{database_id}"
-    headers = {
-        'Authorization': f'Bearer {token}',
-        'Notion-Version': '2022-06-28',
-        'Content-Type': 'application/json'
-    }
-    print(f"Using token: {token} and database: {database_id}")
-    response = requests.get(headers=headers, url=url)
+class DailyTaskRotator:
 
-    if response.status_code == 200:
-        response_json = json.loads(response.text)
-        print(f"Database name: {response_json['title'][0]['text']['content']}")
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
+    def __init__(self, config):
+        self.config = config
 
+    def get_task_due_today(self):
+        due_date = get_today()
+        return self.get_incomplete_tasks_by_due_date(due_date)
 
-def get_task_due_today(database_id: str, token: str):
-    url = f"https://api.notion.com/v1/databases/{database_id}/query"
-    headers = {
-        'Authorization': f'Bearer {token}',
-        'Notion-Version': '2022-06-28',
-        'Content-Type': 'application/json'
-    }
-    data = {
-        "filter": {
-            "property": "Due Date",
-            "date": {
-                "equals": "2023-10-18"
+    def udpate_task_due_date_to_today(self, task: Task):
+        task_id = task.task_id
+        due_date = get_today()
+        url = f"{self.config.BASE_URI}pages/{task_id}"
+        data = {
+            "properties": {
+                "Due Date": {
+                    "date": {"start": f"{due_date}"}
+                }
             }
         }
-    }
-    print(f"Using token: {token} and database: {database_id}")
-    response = requests.post(headers=headers, url=url, json=data)
+        print(f"Updating due date for: {task.task_name}")
+        response = requests.patch(headers=self.config.HEADERS, url=url, json=data)
 
-    if response.status_code == 200:
-        response_json = json.loads(response.text)
-        print(f"Task Name: {response_json['results'][0]['properties']['Name']['title'][0]['text']['content']}")
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
+        if response.status_code == 200:
+            response_json = json.loads(response.text)
+            task_title = response_json['properties']['Name']['title'][0]['text']['content']
+            print(f"Updated due date for: {task_title}")
+        else:
+            print(f"Error: {response.status_code}")
+            print(response.text)
 
+    def get_tasks_due_yesterday(self) -> Optional[List[Task]]:
+        due_date = get_yesterday()
+        return self.get_incomplete_tasks_by_due_date(due_date)
 
-def get_task_due_yesterday(database_id: str, token: str) -> Optional[Dict[str, Any]]:
-    url = f"https://api.notion.com/v1/databases/{database_id}/query"
-    due_date = get_yesterday()
-    headers = {
-        'Authorization': f'Bearer {token}',
-        'Notion-Version': '2022-06-28',
-        'Content-Type': 'application/json'
-    }
-    data = {
-        "filter": {
-            "property": "Due Date",
-            "date": {
-                "equals": f"{due_date}"
+    def get_incomplete_tasks_by_due_date(self, due_date) -> Optional[List[Task]]:
+        """
+        Connects to a Notion database and fetch all tasks by due date
+        with a status "Not Started" or "In Progress".
+        :return: List of Task
+        """
+
+        url = f"{self.config.BASE_URI}databases/{self.config.database_id}/query"
+        data = {
+            "filter": {
+                "property": "Due Date",
+                "date": {
+                    "equals": f"{due_date}"
+                }
             }
         }
-    }
-    print(f"Using token: {token} and database: {database_id}")
-    response = requests.post(headers=headers, url=url, json=data)
+        print(f"Using token: {self.config.token} and database: {self.config.database_id}")
+        response = requests.post(headers=self.config.HEADERS, url=url, json=data)
 
-    if response.status_code == 200:
-        response_json = json.loads(response.text)
-        task_id = response_json['results'][0]['id']
-        task_name = response_json['results'][0]['properties']['Name']['title'][0]['text']['content']
-        # print(f"Task Name: {response_json['results'][0]['properties']['Name']['title'][0]['text']['content']}")
-        return {"task_id": task_id, "task_name": task_name}
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
-        return None
+        if response.status_code == 200:
+            response_json = json.loads(response.text)
+            tasks = response_json["results"]
 
+            return [
+                Task(task['id'], task['properties']['Name']['title'][0]['text']['content'])
+                for task in tasks if task
+            ]
 
-def udpate_task_due_date(task_id: str, token: str, due_date: date):
-    url = f"https://api.notion.com/v1/pages/{task_id}"
-    headers = {
-        'Authorization': f'Bearer {token}',
-        'Notion-Version': '2022-06-28',
-        'Content-Type': 'application/json'
-    }
-    data = {
-        "properties": {
-            "Due Date": {
-                "date": {"start": f"{due_date}"}
-            }
-        }
-    }
-    print(f"Using token: {token} and page: {task_id}")
-    response = requests.patch(headers=headers, url=url, json=data)
-
-    if response.status_code == 200:
-        response_json = json.loads(response.text)
-        # print(f"Task Name: {response_json['results'][0]['properties']['Name']['title'][0]['text']['content']}")
-        print(f"Task Name: {response_json}")
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
-
+        else:
+            print(f"Error: {response.status_code}")
+            print(response.text)
+            return None
