@@ -1,4 +1,4 @@
-.PHONY clean build publish
+.PHONY:	clean
 
 clean:
 	@echo "Cleaning dist..."
