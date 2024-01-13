@@ -20,9 +20,9 @@ data "aws_iam_policy_document" "daily_task_automator_policy_document" {
 }
 
 resource "aws_iam_role_policy" "daily_task_automator_role_policy" {
-    name = "notion-automator-daily-task-automator-policy"
-    role = aws_iam_role.daily_task_automator_role.id
-    policy = data.aws_iam_policy_document.daily_task_automator_policy_document.json
+  name   = "notion-automator-daily-task-automator-policy"
+  role   = aws_iam_role.daily_task_automator_role.id
+  policy = data.aws_iam_policy_document.daily_task_automator_policy_document.json
 }
 
 resource "aws_iam_role" "daily_task_automator_role" {

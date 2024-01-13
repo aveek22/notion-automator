@@ -1,6 +1,6 @@
 data "archive_file" "lambda" {
   type        = "zip"
-  source_dir = "../src/"
+  source_dir  = "../src/"
   output_path = "../dist/daily-task-rotator.zip"
 }
 
@@ -18,7 +18,7 @@ resource "aws_lambda_function" "daily_task_rotator" {
 
   environment {
     variables = {
-      DB_TASKS = "bar"
+      DB_TASKS      = "bar"
       NOTION_SECRET = "foo"
     }
   }
