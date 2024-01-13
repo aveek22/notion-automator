@@ -1,1 +1,1 @@
-include ../../ci/make/app.mk
+include ../../ci/make/app.Makefile
