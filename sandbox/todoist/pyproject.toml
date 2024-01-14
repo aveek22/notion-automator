@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "todoist"
+version = "0.1.0"
+description = ""
+authors = ["Aveek Das <aveek.22@gmail.com>"]
+readme = "README.md"
+packages = [{include = "todoist"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.0"
+todoist-api-python = "^2.1.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
